@@ -1,12 +1,12 @@
 /* 
-	Document is the DOM can be accessed in the console with document.window.
-	Tree is from the top, html, body, p etc.
+  Document is the DOM can be accessed in the console with document.window.
+  Tree is from the top, html, body, p etc.
 
-	Problem: User interaction does not provide the correct results.
-	Solution: Add interactivity so the user can manage daily tasks.
-	Break things down into smaller steps and take each step at a time.
+  Problem: User interaction does not provide the correct results.
+  Solution: Add interactivity so the user can manage daily tasks.
+  Break things down into smaller steps and take each step at a time.
 
-	Event handling, user interaction is what starts the code execution.
+  Event handling, user interaction is what starts the code execution.
 */
 
 let taskInput = document.querySelector(".input_add");
@@ -70,10 +70,10 @@ let editTask = function () {
   let isEditedState = listItem.classList.contains("li_edit");
 
   /*
-		Task can turn into 2 states: edit (has class 'li_edit') or save
-		Edited state: input field turns into label (-> saved state)
-		Saved state:  label turns into input field (-> edited state)
-	*/
+    Task can turn into 2 states: edit (has class 'li_edit') or save
+    Edited state: input field turns into label (-> saved state)
+    Saved state:  label turns into input field (-> edited state)
+  */
   if (isEditedState) {
     label.innerText = editInput.value;
     editInput.classList.remove("input_shown");
@@ -123,7 +123,7 @@ let ajaxRequest = function () {
 };
 
 /*
-	Bind events to lists of completed/incompleted tasks, to buttons 
+  Bind events to lists of completed/incompleted tasks, to buttons 
 */
 addButton.addEventListener("click", addTask);
 addButton.addEventListener("click", ajaxRequest);
