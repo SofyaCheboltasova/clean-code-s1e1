@@ -106,7 +106,7 @@ let taskCompleted = function () {
   let listItem = this.parentNode;
   listItem.querySelector(".label").classList.add("label", "label_completed");
   completedTasksHolder.appendChild(listItem);
-  bindTaskEvents(listItem, taskIncomplete);
+  changeCheckboxEvent(listItem, taskIncomplete);
 };
 
 let taskIncomplete = function () {
@@ -115,7 +115,7 @@ let taskIncomplete = function () {
   let listItem = this.parentNode;
   listItem.querySelector(".label").classList.remove("label_completed");
   incompleteTaskHolder.appendChild(listItem);
-  bindTaskEvents(listItem, taskCompleted);
+  changeCheckboxEvent(listItem, taskCompleted);
 };
 
 let ajaxRequest = function () {
@@ -124,20 +124,30 @@ let ajaxRequest = function () {
 
 /*
   Bind events to lists of completed/incompleted tasks, to buttons 
+
+	bindTaskEvents() is called once for each list item to set event listeners
+	changeCheckboxEvent() is called after checkbox state changes
 */
 addButton.addEventListener("click", addTask);
 addButton.addEventListener("click", ajaxRequest);
 
-let bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
-  console.log("bind list item events");
+let changeCheckboxEvent = function (taskListItem, checkBoxEventHandler) {
+  console.log("Bind checkbox event");
 
   let checkBox = taskListItem.querySelector(".checkbox");
+  checkBox.onchange = checkBoxEventHandler;
+};
+
+let bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
+  console.log("Bind list item events");
+
   let editButton = taskListItem.querySelector(".button_edit");
   let deleteButton = taskListItem.querySelector(".button_delete");
 
   editButton.addEventListener("click", editTask);
   deleteButton.addEventListener("click", deleteTask);
-  checkBox.addEventListener("change", checkBoxEventHandler);
+
+  changeCheckboxEvent(taskListItem, checkBoxEventHandler);
 };
 
 for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
