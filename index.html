@@ -1,64 +1,64 @@
 <!DOCTYPE html>
-	<head>
-		<title>Todo App</title>
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-		<link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
-		<link rel="stylesheet" href="variables.css" media="screen" charset="utf-8">
-	</head>
-	<body>
-		<header class="header">
-			<img class="header__img" src="./eisenhower-matrix.jpg" alt="Eisenhower matrix image">
-			<a class="header__inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-		</header>
-		
-		<article class="content">
-			<section class="section_add">
-				<h3 class="section__header">Add Item</h3>
-				<div class="section__input">
-					<input class="input input_add" type="text">
-					<button class="button button_add">Add</button>
-				</div>
-			</section>
-			
-			<section>
-				<h3 class="section__header">Todo</h3>
-				<ul class="ul" id="incompleted_tasks">
-					<li class="li">
-						<input class="checkbox" type="checkbox">
-						<label class="label">Pay Bills</label>
-						<input class="input input_hidden" type="text">
-						<button class="button button_edit">Edit</button>
-						<button class="button button_delete">
-							<img class="button__delete-img" src="./remove.svg" alt="remove">
-						</button>
-					</li>
-					<li class="li li_edit">
-						<input class="checkbox" type="checkbox">
-						<label class="label label_hidden">Go Shopping</label>
-						<input value="Go Shopping" class="input" type="text">
-						<button class="button button_edit">Save</button>
-						<button class="button button_delete">
-							<img class="button__delete-img" src="./remove.svg" alt="Remove">
-						</button>
-					</li>
-				</ul>
-			</section>
+  <head>
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="variables.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__img" src="./eisenhower-matrix.jpg" alt="Eisenhower matrix image">
+      <a class="header__inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    </header>
+    
+    <article class="content">
+      <section class="section_add">
+        <h3 class="section__header">Add Item</h3>
+        <div class="section__input">
+          <input class="input input_add" type="text">
+          <button class="button button_add">Add</button>
+        </div>
+      </section>
+      
+      <section>
+        <h3 class="section__header">Todo</h3>
+        <ul class="ul" id="incompleted_tasks">
+          <li class="li">
+            <input class="checkbox" type="checkbox">
+            <label class="label">Pay Bills</label>
+            <input class="input input_hidden" type="text">
+            <button class="button button_edit">Edit</button>
+            <button class="button button_delete">
+              <img class="button__delete-img" src="./remove.svg" alt="remove">
+            </button>
+          </li>
+          <li class="li li_edit">
+            <input class="checkbox" type="checkbox">
+            <label class="label label_hidden">Go Shopping</label>
+            <input value="Go Shopping" class="input" type="text">
+            <button class="button button_edit">Save</button>
+            <button class="button button_delete">
+              <img class="button__delete-img" src="./remove.svg" alt="Remove">
+            </button>
+          </li>
+        </ul>
+      </section>
 
-			<section>
-				<h3 class="section__header">Completed</h3>
-				<ul class="ul" id="completed_tasks">
-					<li class="li">
-						<input class="checkbox" type="checkbox" checked>
-						<label class="label label_completed">See the Doctor</label>
-						<input class="input input_hidden" type="text">
-						<button class="button button_edit">Edit</button>
-						<button class="button button_delete">
-							<img class="button__delete-img" src="./remove.svg" alt="Remove">
-						</button>
-					</li>
-				</ul>
-			</section>
-		</article>
-		<script src="app.js"></script>
-	</body>
+      <section>
+        <h3 class="section__header">Completed</h3>
+        <ul class="ul" id="completed_tasks">
+          <li class="li">
+            <input class="checkbox" type="checkbox" checked>
+            <label class="label label_completed">See the Doctor</label>
+            <input class="input input_hidden" type="text">
+            <button class="button button_edit">Edit</button>
+            <button class="button button_delete">
+              <img class="button__delete-img" src="./remove.svg" alt="Remove">
+            </button>
+          </li>
+        </ul>
+      </section>
+    </article>
+    <script src="app.js"></script>
+  </body>
 </html>
