@@ -34,7 +34,7 @@ body {
 }
 
 .button:hover {
-  color: #3a3A3a;
+  color: #3a3a3a;
 }
 
 .input {
@@ -43,11 +43,11 @@ body {
   height: 21px;
   padding: 0 9px;
   border: 1px solid #ddd;
-  background: #FFF;
+  background: #fff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
-	width: 226px;
+  width: 226px;
 }
 
 .input:focus {
@@ -61,7 +61,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-	list-style: none;
+  list-style: none;
 }
 
 li > * {
@@ -88,25 +88,24 @@ li > * {
 /* Heading */
 .header {
   width: 500px;
-	margin: 0 auto;
+  margin: 0 auto;
   display: block;
   text-align: right;
 }
 
 .header__img {
-	width: 100%;
+  width: 100%;
 }
 
 .header__inf {
   font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
-	.header { 
-		text-align: center;
-	}
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+  }
 }
-
 
 /* New Task */
 .section__header {
@@ -121,11 +120,11 @@ li > * {
 
 .section__input {
   display: flex;
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .section_add {
-	margin: 1em 0;
+  margin: 1em 0;
 }
 
 .input_add {
@@ -145,20 +144,20 @@ li > * {
 
 /* Completed */
 .label_completed {
-	text-decoration: line-through;
-	color: #888;
+  text-decoration: line-through;
+  color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
-	display:none
+.input_hidden {
+  display: none;
 }
 
-ul li.editMode input[type=text] {
-	display:inline-block;
-	width:224px
+.label_hidden {
+  display: none;
 }
 
-ul li.editMode label {
-	display:none;
+.input_shown {
+  display: inline-block;
+  width: 224px;
 }
