@@ -37,17 +37,13 @@ let createNewTaskElement = function (taskString) {
   editButton.innerText = "Edit";
   editButton.classList.add("button", "button_edit");
 
-  deleteButton.classList.add("button", "button_delete");
-
   deleteButtonImg.classList.add("button__delete_img");
   deleteButtonImg.src = "./remove.svg";
+
+  deleteButton.classList.add("button", "button_delete");
   deleteButton.appendChild(deleteButtonImg);
 
-  listItem.appendChild(checkBox);
-  listItem.appendChild(label);
-  listItem.appendChild(editInput);
-  listItem.appendChild(editButton);
-  listItem.appendChild(deleteButton);
+  listItem.append(checkBox, label, editInput, editButton, deleteButton);
   return listItem;
 };
 
@@ -68,7 +64,6 @@ let editTask = function () {
   console.log("Change 'edit' to 'save'");
 
   let listItem = this.parentNode;
-
   let editInput = listItem.querySelector(".input");
   let label = listItem.querySelector(".label");
   let editBtn = listItem.querySelector(".button_edit");
