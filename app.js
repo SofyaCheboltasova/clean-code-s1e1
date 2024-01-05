@@ -37,7 +37,7 @@ let createNewTaskElement = function (taskString) {
   editButton.innerText = "Edit";
   editButton.classList.add("button", "button_edit");
 
-  deleteButtonImg.classList.add("button__delete_img");
+  deleteButtonImg.classList.add("button__delete-img");
   deleteButtonImg.src = "./remove.svg";
 
   deleteButton.classList.add("button", "button_delete");
